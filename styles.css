@@ -2,7 +2,73 @@
 .backImg{
   background-image: url("images/keyboardDark.jpg");
   background-color: rgb(53, 60, 108);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   height: 100vh;
+}
+
+/* custom icons */
+.burger{
+  min-height:5px;
+  margin: 6px;
+  width:35px;
+  border-radius: 15px;
+  background-color: rgb(255, 253, 219);
+}
+
+/* buttons */
+.toggleButton{
+  background-color: rgba(255, 255, 255, 0);
+  border-color: rgba(255, 255, 255, 0);
+  margin: 15px 0px 15px 0px;
+  border-radius: 10px;
+}
+.toggleButton:focus{
+  /* background-color: rgba(255, 253, 219,.2); */
+  outline: none;
+}
+/* hide burger icon when clicked*/
+.toggleButton:focus .burger{
+  display: none;
+}
+.menuList{
+  height: 100vh;
+  padding: 0;
+  margin:0;
+}
+
+ul.menuList li{
+  width: 50vw;
+  height: 15vh;
+  margin-top: 12.5vh;
+  margin-bottom: 15vh;
+  display: none;
+}
+
+.toggleButton:focus + ul.menuList li{
+  display: block;
+}
+
+.menuButton{
+  background-color: rgba(0, 0, 0, 0);
+  min-width: 100%;
+  min-height: 100%;
+  border-style: solid;
+  border-width: 5px;
+  border-color:rgb(255, 253, 219);
+  color: rgb(255, 253, 219);
+  border-radius: 25px;
+  transition: transform 50ms ease-in-out;
+}
+
+.menuButton:active{
+  transform: scale(1.1);
+}
+
+/* fonts */
+.webFont{
+  font-family: 'Oxygen', sans-serif;
 }
 
 /* for bigger than 600 pixels aka tablets */
