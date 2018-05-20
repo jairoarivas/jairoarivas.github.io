@@ -1,6 +1,16 @@
 /* ---------images-------- */
-
 .backImg{
   background-image: url("images/keyboardDark.jpg");
   background-color: rgb(53, 60, 108);
+  height: 100vh;
+}
+
+/* for bigger than 600 pixels aka tablets */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* for bigger than 768 pixels aka desktops */
+@media only screen and (min-width: 768px){
+
 }
