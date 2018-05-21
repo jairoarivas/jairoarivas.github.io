@@ -1,6 +1,8 @@
+/* this website is styled for mobile first */
+
 /* ---------images-------- */
 .backImg{
-  background-image: url("images/keyboardDark.jpg");
+  background-image: url("images/keyboardDark-min.jpg");
   background-color: rgb(53, 60, 108);
   background-size: cover;
   background-repeat: no-repeat;
@@ -8,7 +10,7 @@
   height: 100vh;
 }
 
-/* custom icons */
+/* ---------- custom icons ---------- */
 .burger{
   min-height:5px;
   margin: 6px;
@@ -17,19 +19,21 @@
   background-color: rgb(255, 253, 219);
 }
 
-/* buttons */
+/* ---------- buttons ---------- */
+
+/* menu toggle button */
 .toggleButton{
   background-color: rgba(255, 255, 255, 0);
   border-color: rgba(255, 255, 255, 0);
   margin: 15px 0px 15px 0px;
   border-radius: 10px;
 }
-
 .toggleButton:focus{
   background-color: rgba(255, 253, 219,.2);
   outline: none;
 }
 
+/* dropdown menu */
 .menuList{
   height: 87.5vh;
   padding: 0;
@@ -37,26 +41,23 @@
   margin-top:12.5vh;
   display: none;
 }
-
 ul.menuList li{
   width: 50vw;
   height: 15vh;
   margin-bottom: 15vh;
   display: block;
 }
-
 ul.menuList li:nth-child(3){
   width: 50vw;
   height: 15vh;
   margin-bottom: 12.5vh;
 }
 
-/* displaying menu animating menu buttons individually */
+/*displaying/animating menu buttons individually */
 .toggleButton.clicked + ul.menuList {
   display: block;
   perspective:1000px;
 }
-
 .toggleButton.clicked + ul.menuList li:nth-child(1){
   display: block;
   opacity: 0;
@@ -83,7 +84,7 @@ ul.menuList li:nth-child(3){
   animation-delay: 300ms;
   animation-fill-mode: forwards;
 }
-
+/*menu button animation */
 @keyframes menu {
   0% {
     opacity:0;
@@ -98,6 +99,7 @@ ul.menuList li:nth-child(3){
   }
 }
 
+/* menu item button */
 .menuButton{
   background-color: rgba(0, 0, 0, 0);
   min-width: 100%;
@@ -108,7 +110,6 @@ ul.menuList li:nth-child(3){
   color: rgb(255, 253, 219);
   border-radius: 25px;
 }
-
 .menuButton:focus{
   outline: none;
   animation-name: menuB;
@@ -116,7 +117,7 @@ ul.menuList li:nth-child(3){
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
 }
-
+/* animation for when clicking menu button */
 @keyframes menuB {
   0% {
     transform: scale(1);
@@ -127,7 +128,7 @@ ul.menuList li:nth-child(3){
   }
 }
 
-/* fonts */
+/* ---------- fonts ---------- */
 .webFont{
   font-family: 'Oxygen', sans-serif;
 }

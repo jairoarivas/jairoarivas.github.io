@@ -1,15 +1,4 @@
-// function toggle(id){
-//   var e = document.getElementById(id);
-//   if(e.style.display == 'block'){
-//     e.style.display ='none';
-//     console.log(e.style.display);
-//   }
-//   else{
-//     e.style.display ='block';
-//     console.log(e.style.display);
-//   }
-// }
-
+// script for adding "clicked" class when toggle menu button is clicked
 $('.toggleButton').on('click', function(){
   $(this).toggleClass('clicked');
 });
