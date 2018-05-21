@@ -10,7 +10,13 @@
   height: 100vh;
 }
 
+.filterDim{
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 /* ---------- custom icons ---------- */
+
+/* burger menu */
 .burger{
   min-height:5px;
   margin-top: 6px;
@@ -26,6 +32,7 @@
   animation-delay: 0ms;
   animation-fill-mode: forwards;
 }
+/* burger icon animation */
 @keyframes menuBurger{
   0%{
     opacity: 0;
@@ -34,11 +41,12 @@
     transform: scale(1.2);
   }
   100%{
-      transform: scale(1);
+    transform: scale(1);
     opacity: 1;
   }
 }
 
+/* exit icon */
 .cross1{
   height: 5px;
   width: 38px;
@@ -56,6 +64,7 @@
   display: none;
 }
 
+/* toggling between burger and exit icons */
 .toggleButton.clicked div.cross1{
   display: block;
   opacity: 0;
@@ -75,6 +84,7 @@
   animation-fill-mode: forwards;
 }
 
+/* exit icon animations */
 @keyframes exit1{
   0%{
     transform: rotateZ(45deg) translateX(1px) translateY(3px);
@@ -88,7 +98,6 @@
     opacity: 1;
   }
 }
-
 @keyframes exit2{
   0%{
     transform:rotateZ(-45deg) translateX(1px) translateY(-2px);
@@ -108,13 +117,17 @@
 }
 /* ---------- buttons ---------- */
 
+#togButton{
+  display: none;
+}
+
 /* menu toggle button */
 .toggleButton{
   width:51px;
   height:45px;
   background-color: rgba(255, 255, 255, 0);
   border-color: rgba(255, 255, 255, 0);
-  margin: 15px 0px 15px 0px;
+  margin: 15px 10px 15px 0px;
   border-radius: 10px;
 }
 .toggleButton:focus{
@@ -220,6 +233,40 @@ ul.menuList li:nth-child(3){
 /* ---------- fonts ---------- */
 .webFont{
   font-family: 'Oxygen', sans-serif;
+}
+
+
+/* ---------- home page ---------- */
+.welcome{
+  opacity: 0;
+  min-height: 30vh;
+  width:100vw;
+  padding-top: 35vh;
+  padding-bottom: 35vh;
+  animation-name: wel;
+  animation-duration: 2s;
+  animation-delay: 2s;
+  animation-timing-function: ease-in-out;
+}
+.welcome h1{
+  min-height: 10vh;
+  margin:0;
+  color: rgb(255, 253, 219);
+  text-align: center;
+  padding-top:10vh;
+  padding-bottom:10vh;
+}
+
+@keyframes wel{
+  0%{
+    opacity: 0;
+  }
+  30%,70%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
 }
 
 /* for bigger than 600 pixels aka tablets */
