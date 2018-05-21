@@ -244,8 +244,8 @@ ul.menuList li:nth-child(3){
   padding-top: 35vh;
   padding-bottom: 35vh;
   animation-name: wel;
-  animation-duration: 2s;
-  animation-delay: 2s;
+  animation-duration: 1.5s;
+  animation-delay: 1.5s;
   animation-timing-function: ease-in-out;
 }
 .welcome h1{
@@ -261,7 +261,7 @@ ul.menuList li:nth-child(3){
   0%{
     opacity: 0;
   }
-  30%,70%{
+  20%,80%{
     opacity: 1;
   }
   100%{
