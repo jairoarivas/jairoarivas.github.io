@@ -24,30 +24,78 @@
   margin: 15px 0px 15px 0px;
   border-radius: 10px;
 }
+
 .toggleButton:focus{
-  /* background-color: rgba(255, 253, 219,.2); */
+  background-color: rgba(255, 253, 219,.2);
   outline: none;
 }
-/* hide burger icon when clicked*/
-.toggleButton:focus .burger{
-  display: none;
-}
+
 .menuList{
-  height: 100vh;
+  height: 87.5vh;
   padding: 0;
   margin:0;
+  margin-top:12.5vh;
+  display: none;
 }
 
 ul.menuList li{
   width: 50vw;
   height: 15vh;
-  margin-top: 12.5vh;
   margin-bottom: 15vh;
-  display: none;
+  display: block;
 }
 
-.toggleButton:focus + ul.menuList li{
+ul.menuList li:nth-child(3){
+  width: 50vw;
+  height: 15vh;
+  margin-bottom: 12.5vh;
+}
+
+/* displaying menu animating menu buttons individually */
+.toggleButton.clicked + ul.menuList {
   display: block;
+  perspective:1000px;
+}
+
+.toggleButton.clicked + ul.menuList li:nth-child(1){
+  display: block;
+  opacity: 0;
+  animation-name: menu;
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+.toggleButton.clicked + ul.menuList li:nth-child(2){
+  display: block;
+  opacity: 0;
+  animation-name: menu;
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+  animation-delay: 150ms;
+  animation-fill-mode: forwards;
+}
+.toggleButton.clicked + ul.menuList li:nth-child(3){
+  display: block;
+  opacity: 0;
+  animation-name: menu;
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+  animation-delay: 300ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes menu {
+  0% {
+    opacity:0;
+    transform: scale(0.3) translateY(30px);
+  }
+  80% {
+    transform: scale(1.2) translateY(-10px);
+  }
+  100% {
+    opacity:1;
+    transform: scale(1) translateY(0px);
+  }
 }
 
 .menuButton{
@@ -59,12 +107,24 @@ ul.menuList li{
   border-color:rgb(255, 253, 219);
   color: rgb(255, 253, 219);
   border-radius: 25px;
-  transition: transform 50ms ease-in-out;
 }
 
- 
-.menuButton:active{
-  transform: scale(1.1);
+.menuButton:focus{
+  outline: none;
+  animation-name: menuB;
+  animation-duration: 50ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes menuB {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+    background-color: rgba(255, 253, 219,.2);
+  }
 }
 
 /* fonts */
