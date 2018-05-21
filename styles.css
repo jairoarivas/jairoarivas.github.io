@@ -13,16 +13,105 @@
 /* ---------- custom icons ---------- */
 .burger{
   min-height:5px;
-  margin: 6px;
+  margin-top: 6px;
+  margin-bottom: 6px;
   width:35px;
   border-radius: 15px;
   background-color: rgb(255, 253, 219);
+  display: block;
+  opacity: 0;
+  animation-name: menuBurger;
+  animation-duration: 200ms;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0ms;
+  animation-fill-mode: forwards;
+}
+@keyframes menuBurger{
+  0%{
+    opacity: 0;
+  }
+  80%{
+    transform: scale(1.2);
+  }
+  100%{
+      transform: scale(1);
+    opacity: 1;
+  }
 }
 
+.cross1{
+  height: 5px;
+  width: 38px;
+  border-radius: 15px;
+  background-color: rgb(255, 253, 219);
+  transform: rotateZ(45deg) translateX(1px) translateY(3px);
+  display: none;
+}
+.cross2{
+  height: 5px;
+  width: 38px;
+  border-radius: 15px;
+  background-color: rgb(255, 253, 219);
+  transform: rotateZ(-45deg) translateX(1px) translateY(-2px);
+  display: none;
+}
+
+.toggleButton.clicked div.cross1{
+  display: block;
+  opacity: 0;
+  animation-name: exit1;
+  animation-duration: 200ms;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0ms;
+  animation-fill-mode: forwards;
+}
+.toggleButton.clicked div.cross2{
+  display: block;
+  opacity: 0;
+  animation-name: exit2;
+  animation-duration: 200ms;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes exit1{
+  0%{
+    transform: rotateZ(45deg) translateX(1px) translateY(3px);
+    opacity: 0;
+  }
+  80%{
+    transform: scale(1.2) rotateZ(45deg) translateX(1px) translateY(3px);
+  }
+  100%{
+      transform: scale(1) rotateZ(45deg) translateX(1px) translateY(3px);
+    opacity: 1;
+  }
+}
+
+@keyframes exit2{
+  0%{
+    transform:rotateZ(-45deg) translateX(1px) translateY(-2px);
+    opacity: 0;
+  }
+  80%{
+      transform: scale(1.2) rotateZ(-45deg) translateX(1px) translateY(-2px);
+  }
+  100%{
+      transform: scale(1.0) rotateZ(-45deg) translateX(1px) translateY(-2px);
+    opacity: 1;
+  }
+}
+
+.toggleButton.clicked div.burger{
+  display: none;
+}
 /* ---------- buttons ---------- */
 
 /* menu toggle button */
 .toggleButton{
+  width:51px;
+  height:45px;
   background-color: rgba(255, 255, 255, 0);
   border-color: rgba(255, 255, 255, 0);
   margin: 15px 0px 15px 0px;
