@@ -3,15 +3,17 @@
 /* ---------images-------- */
 .backImg{
   background-image: url("images/keyboardDark-min.jpg");
-  background-color: rgb(53, 60, 108);
+  background-color: rgb(8, 28, 111);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  background-attachment: fixed;
   height: 100vh;
 }
 
 .filterDim{
   background-color: rgba(0, 0, 0, 0.5);
+  background-attachment: fixed;
 }
 
 .filterDim.welcomeOver{
@@ -140,6 +142,9 @@
 
 /* menu toggle button */
 .toggleButton{
+  position: fixed;
+  bottom:88vh;
+  right:2vw;
   width:51px;
   height:45px;
   background-color: rgba(255, 255, 255, 0);
@@ -247,6 +252,19 @@ ul.menuList li:nth-child(3){
   }
 }
 
+.resumeButton{
+  width:50vw;
+  opacity: 0;
+  margin: auto;
+  margin-top: 13vh;
+  height:17vh;
+  animation-name: wel2;
+  animation-duration: 400ms;
+  animation-delay: 350ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
 /* ---------- fonts ---------- */
 .webFont{
   font-family: 'Oswald', sans-serif;
@@ -273,7 +291,6 @@ ul.menuList li:nth-child(3){
   padding-top:10vh;
   padding-bottom:10vh;
 }
-
 @keyframes wel{
   0%{
     opacity: 0;
@@ -287,15 +304,13 @@ ul.menuList li:nth-child(3){
     height:0vh;
   }
 }
-
 .welcome2{
   display: none;
   min-height: 30vh;
   width:100vw;
   margin-top: 35vh;
-  padding-bottom: 35vh;
+  padding-bottom: 3vh;
 }
-
 .welcome2 h1{
   min-height: 10vh;
   opacity: 0;
@@ -314,7 +329,6 @@ ul.menuList li:nth-child(3){
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
 }
-
 .welcome2 h3{
   max-height: 5vh;
   opacity: 0;
@@ -329,7 +343,6 @@ ul.menuList li:nth-child(3){
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
 }
-
 @keyframes wel2{
   0%{
     opacity: 0;
@@ -345,10 +358,25 @@ ul.menuList li:nth-child(3){
 
 /* ---------- home page ---------- */
 
-/* .intro{
-  height: 50vh;
-  background-color: rgb(32, 67, 135);
-} */
+.aboutMe{
+  padding-top: 5vh;
+  height: 100vh;
+  background-color: rgb(255, 253, 219);
+  text-align: center;
+
+}
+
+.aboutMe h1{
+  color: rgb(8, 28, 111);
+  /* color: rgb(255, 152, 15) */
+}
+
+.aboutMe p{
+  text-align: justify;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  font-size: 150%;
+}
 
 /* for bigger than 600 pixels aka tablets */
 @media only screen and (min-width: 600px) {
