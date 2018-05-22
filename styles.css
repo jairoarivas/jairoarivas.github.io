@@ -14,6 +14,23 @@
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+.filterDim.welcomeOver{
+  animation-name: welcome2;
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes welcome2 {
+  0%{
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  100%{
+    background-color: rgba(8, 28, 111, 0.5);
+  }
+}
+
 /* ---------- custom icons ---------- */
 
 /* burger menu */
@@ -232,11 +249,11 @@ ul.menuList li:nth-child(3){
 
 /* ---------- fonts ---------- */
 .webFont{
-  font-family: 'Oxygen', sans-serif;
+  font-family: 'Oswald', sans-serif;
 }
 
 
-/* ---------- home page ---------- */
+/* ---------- welcome ---------- */
 .welcome{
   opacity: 0;
   min-height: 30vh;
@@ -263,11 +280,75 @@ ul.menuList li:nth-child(3){
   }
   20%,80%{
     opacity: 1;
+    height:30vh;
   }
   100%{
     opacity: 0;
+    height:0vh;
   }
 }
+
+.welcome2{
+  display: none;
+  min-height: 30vh;
+  width:100vw;
+  margin-top: 35vh;
+  padding-bottom: 35vh;
+}
+
+.welcome2 h1{
+  min-height: 10vh;
+  opacity: 0;
+  margin:auto;
+  color: rgb(255, 253, 219);
+  text-align: center;
+  font-weight: bolder;
+  font-size: 400%;
+  width: auto;
+  background-color: rgba(255, 152, 15, 0.75);
+  border-radius: 10px;
+  margin-bottom: 4vh;
+  animation-name: wel2;
+  animation-duration: 400ms;
+  animation-delay: 300ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.welcome2 h3{
+  max-height: 5vh;
+  opacity: 0;
+  margin:0;
+  color: rgb(255, 253, 219);
+  text-align: center;
+  padding-bottom:7vh;
+  padding-top: 4vh;
+  animation-name: wel2;
+  animation-duration: 400ms;
+  animation-delay: 250ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes wel2{
+  0%{
+    opacity: 0;
+  }
+  80%{
+    transform: scale(1.2);
+  }
+  100%{
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ---------- home page ---------- */
+
+/* .intro{
+  height: 50vh;
+  background-color: rgb(32, 67, 135);
+} */
 
 /* for bigger than 600 pixels aka tablets */
 @media only screen and (min-width: 600px) {
