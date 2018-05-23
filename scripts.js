@@ -4,38 +4,32 @@ for(var i =0; i < g.length; i++){
   g[i].style.display = 'none';
 }
 
-$('.cardDes').on('focusin',function(){
+// animating cards when hovering
+$('.cardDes').hover(function(){
     var x = $(this).prev();
     x.addClass('animate');
-});
-$('.cardDes').on('focusout',function(){
+},function(){
     var x = $(this).prev();
     x.removeClass('animate');
 });
-
-$('.card1Image').on('focusin',function(){
+$('.card1Image').hover(function(){
     var x = $(this);
     x.addClass('animate');
-});
-$('.card1Image').on('focusout',function(){
+},function(){
     var x = $(this);
     x.removeClass('animate');
 });
-
-$('.card2Image').on('focusin',function(){
+$('.card2Image').hover(function(){
     var x = $(this);
     x.addClass('animate');
-});
-$('.card2Image').on('focusout',function(){
+},function(){
     var x = $(this);
     x.removeClass('animate');
 });
-
-$('.card3Image').on('focusin',function(){
+$('.card3Image').hover(function(){
     var x = $(this);
     x.addClass('animate');
-});
-$('.card3Image').on('focusout',function(){
+},function(){
     var x = $(this);
     x.removeClass('animate');
 });

@@ -154,6 +154,31 @@
   outline: none;
 }
 
+.toggleButton:hover{
+  animation-name: hov;
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes hov{
+  0%{
+    background-color: rgba(255, 255, 255, 0);
+  }
+  100%{
+    background-color: rgba(255, 253, 219,.2);
+  }
+}
+
+@keyframes hov{
+  0%{
+    background-color: rgba(255, 255, 255, 0);
+  }
+  100%{
+    background-color: rgba(255, 253, 219,.2);
+  }
+}
+
 /* dropdown menu */
 .menuList{
   height: 87.5vh;
@@ -231,13 +256,14 @@ ul.menuList li:nth-child(3){
   color: rgb(255, 253, 219);
   border-radius: 25px;
 }
-.menuButton:focus{
+.menuButton:hover{
   outline: none;
   animation-name: menuB;
-  animation-duration: 50ms;
+  animation-duration: 200ms;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
 }
+
 /* animation for when clicking menu button */
 @keyframes menuB {
   0% {
@@ -545,11 +571,11 @@ button.card3Image.animate .orangeFilter h3{
 }
 
 /* for bigger than 600 pixels aka tablets */
-@media only screen and (min-width: 600px) {
+/* @media only screen and (min-width: 600px) {
 
-}
+} */
 
 /* for bigger than 768 pixels aka desktops */
-@media only screen and (min-width: 768px){
+/* @media only screen and (min-width: 768px){
 
-}
+} */
