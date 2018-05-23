@@ -1,5 +1,4 @@
 /* this website is styled for mobile first */
-
 /* ---------images-------- */
 .backImg{
   background-image: url("images/keyboardDark-min.jpg");
@@ -9,6 +8,7 @@
   background-position: center;
   background-attachment: fixed;
   height: 100vh;
+  width: 100%;
 }
 
 .filterDim{
@@ -22,7 +22,6 @@
   animation-timing-function: ease-in-out;
   animation-delay: 0ms;
   animation-fill-mode: forwards;
-  -webkit-animation-fill-mode: forwards;
 }
 
 @keyframes welcome2 {
@@ -51,7 +50,6 @@
   animation-timing-function: ease-in-out;
   animation-delay: 0ms;
   animation-fill-mode: forwards;
-  -webkit-animation-fill-mode: forwards;
 }
 /* burger icon animation */
 @keyframes menuBurger{
@@ -94,7 +92,6 @@
   animation-timing-function: ease-in-out;
   animation-delay: 0ms;
   animation-fill-mode: forwards;
-  -webkit-animation-fill-mode: forwards;
 }
 .toggleButton.clicked div.cross2{
   display: block;
@@ -104,7 +101,6 @@
   animation-timing-function: ease-in-out;
   animation-delay: 0ms;
   animation-fill-mode: forwards;
-  -webkit-animation-fill-mode: forwards;
 }
 
 /* exit icon animations */
@@ -190,7 +186,6 @@ ul.menuList li:nth-child(3){
   animation-duration: 300ms;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
-  -webkit-animation-fill-mode: forwards;
 }
 .toggleButton.clicked + ul.menuList li:nth-child(2){
   display: block;
@@ -200,7 +195,6 @@ ul.menuList li:nth-child(3){
   animation-timing-function: ease-in-out;
   animation-delay: 150ms;
   animation-fill-mode: forwards;
-  -webkit-animation-fill-mode: forwards;
 }
 .toggleButton.clicked + ul.menuList li:nth-child(3){
   display: block;
@@ -210,7 +204,6 @@ ul.menuList li:nth-child(3){
   animation-timing-function: ease-in-out;
   animation-delay: 300ms;
   animation-fill-mode: forwards;
-  -webkit-animation-fill-mode: forwards;
 }
 /*menu button animation */
 @keyframes menu {
@@ -244,7 +237,6 @@ ul.menuList li:nth-child(3){
   animation-duration: 50ms;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
-  -webkit-animation-fill-mode: forwards;
 }
 /* animation for when clicking menu button */
 @keyframes menuB {
@@ -269,7 +261,6 @@ ul.menuList li:nth-child(3){
   animation-delay: 350ms;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
-  -webkit-animation-fill-mode: forwards;
 }
 
 /* ---------- fonts ---------- */
@@ -335,7 +326,6 @@ ul.menuList li:nth-child(3){
   animation-delay: 300ms;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
-  -webkit-animation-fill-mode: forwards;
 }
 .welcome2 h3{
   max-height: 5vh;
@@ -350,7 +340,6 @@ ul.menuList li:nth-child(3){
   animation-delay: 250ms;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
-  -webkit-animation-fill-mode: forwards;
 }
 @keyframes wel2{
   0%{
@@ -367,14 +356,19 @@ ul.menuList li:nth-child(3){
 
 /* ---------- home page ---------- */
 
+/* about me */
 .aboutMe{
   padding-top: 5vh;
   background-color: rgb(255, 253, 219);
   text-align: center;
+  padding-bottom: 5vh;
 }
 
 .aboutMe h1{
   color: rgb(8, 28, 111);
+  padding-bottom: 10vh;
+  padding-top: 5vh;
+  margin-bottom: 0;
 }
 
 .aboutMe p{
@@ -384,6 +378,170 @@ ul.menuList li:nth-child(3){
   font-size: 150%;
   margin-bottom: 0;
   padding-bottom: 5vh;
+}
+
+/* cards */
+.orangeFilter{
+  background-color: rgba(255, 152, 15, 0.5);
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.orangeFilter h3{
+  color:rgb(255, 253, 219);
+  text-align: center;
+  padding-top: 12.5vh;
+  padding-bottom: 12.5vh;
+  margin-bottom: 0;
+}
+
+.myCard{
+  height:50vh;
+  margin:0;
+  background-color: rgb(255, 253, 219);
+}
+.cardDes{
+  height:20vh;
+  width:100%;
+  background-color: rgb(255, 253, 219);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-width: thin;
+  border-style: solid;
+  border-color: rgb(40, 40, 40);
+  font-size: 150%;
+  margin-bottom: 0;
+}
+
+/* card animations */
+button.card1Image.animate .orangeFilter{
+  outline: none;
+  animation-name: cards;
+  animation-duration: 200ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+button.card1Image.animate .orangeFilter h3{
+  outline: none;
+  animation-name: cardsText;
+  animation-duration: 150ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+button.card2Image.animate .orangeFilter{
+  outline: none;
+  animation-name: cards;
+  animation-duration: 200ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+button.card2Image.animate .orangeFilter h3{
+  outline: none;
+  animation-name: cardsText;
+  animation-duration: 150ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+button.card3Image.animate .orangeFilter{
+  outline: none;
+  animation-name: cards;
+  animation-duration: 200ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+button.card3Image.animate .orangeFilter h3{
+  outline: none;
+  animation-name: cardsText;
+  animation-duration: 150ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes cards{
+  0%{
+    background-color: rgba(255, 152, 15, 0.5);
+  }
+  100%{
+    background-color: rgba(8, 28, 111, 0.5);
+  }
+}
+@keyframes cardsText{
+  0%{
+    font-size: 200%;
+  }
+  100%{
+    font-size: 250%;
+  }
+}
+.card1Image{
+  background-image: url("images/keyboardDark-min.jpg");
+  background-color: rgb(255, 253, 219);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-attachment: fixed; */
+  height: 30vh;
+  width: 100vw;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-style: none;
+}
+.card2Image{
+  background-image: url("images/keyboardDark-min.jpg");
+  background-color: rgb(255, 253, 219);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-attachment: fixed; */
+  height: 30vh;
+  width: 100vw;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-style: none;
+}
+.card3Image{
+  background-image: url("images/keyboardDark-min.jpg");
+  background-color: rgb(255, 253, 219);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-attachment: fixed; */
+  height: 30vh;
+  width: 100vw;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-style: none;
+}
+
+.contactMe{
+  background-image: url("images/keyboardDark-min.jpg");
+  background-color: rgb(255, 253, 219);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.blueFilter{
+  background-color: rgba(8, 28, 111, 0.5);
+  width:100%;
+}
+.blueFilter h1{
+  color: rgb(255, 253, 219);
+  text-align: center;
+  padding-top: 10vh;
+  padding-bottom: 5vh;
+  font-weight: bold;
+}
+
+.blueFilter p{
+  color: rgb(255, 253, 219);
+  text-align: center;
+  padding: 5vh;
+  font-size: 120%;
+  margin: 0;
 }
 
 /* for bigger than 600 pixels aka tablets */

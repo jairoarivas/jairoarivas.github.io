@@ -1,20 +1,62 @@
 // rest of site is a class used to transition between nav menu and page
 var g = document.getElementsByClassName('restOfSite');
-g[0].style.display = 'none';
+for(var i =0; i < g.length; i++){
+  g[i].style.display = 'none';
+}
+
+$('.cardDes').on('focusin',function(){
+    var x = $(this).prev();
+    x.addClass('animate');
+});
+$('.cardDes').on('focusout',function(){
+    var x = $(this).prev();
+    x.removeClass('animate');
+});
+
+$('.card1Image').on('focusin',function(){
+    var x = $(this);
+    x.addClass('animate');
+});
+$('.card1Image').on('focusout',function(){
+    var x = $(this);
+    x.removeClass('animate');
+});
+
+$('.card2Image').on('focusin',function(){
+    var x = $(this);
+    x.addClass('animate');
+});
+$('.card2Image').on('focusout',function(){
+    var x = $(this);
+    x.removeClass('animate');
+});
+
+$('.card3Image').on('focusin',function(){
+    var x = $(this);
+    x.addClass('animate');
+});
+$('.card3Image').on('focusout',function(){
+    var x = $(this);
+    x.removeClass('animate');
+});
 
 // script for adding "clicked" class when toggle menu button is clicked
 
 $('.toggleButton').on('click', function(){
-  $(this).toggleClass('clicked');
   var e = document.getElementsByClassName('welcome2');
   var r = document.getElementsByClassName('restOfSite');
+  $(this).toggleClass('clicked');
   if($(this).hasClass('clicked')){
     e[0].style.display = 'none';
-    r[0].style.display = 'none';
+    for(var i =0; i < r.length; i++){
+      r[i].style.display = 'none';
+    }
   }
   else{
     e[0].style.display = 'block';
-    r[0].style.display = 'block';
+    for(var i =0; i < r.length; i++){
+      r[i].style.display = 'flex';
+    }
   }
 });
 
@@ -29,7 +71,9 @@ function welcomeTransition(){
   var s = document.getElementsByClassName('welcome2');
   s[0].style.display = 'block';
   var r = document.getElementsByClassName('restOfSite');
-  r[0].style.display = 'block';
+  for(var i =0; i < g.length; i++){
+    r[i].style.display = 'flex';
+  }
 }
 
 setTimeout(welcomeTransition,3000);
