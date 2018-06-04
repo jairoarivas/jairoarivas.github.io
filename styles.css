@@ -395,13 +395,14 @@ ul.menuList li:nth-child(3){
   padding-bottom: 10vh;
   padding-top: 5vh;
   margin-bottom: 0;
+  font-weight: bold;
 }
 
 .aboutMe p{
   text-align: justify;
   margin-left: 10vw;
   margin-right: 10vw;
-  font-size: 150%;
+  font-size: 120%;
   margin-bottom: 0;
   padding-bottom: 5vh;
 }
@@ -409,10 +410,8 @@ ul.menuList li:nth-child(3){
 /* cards */
 .orangeFilter{
   background-color: rgba(255, 152, 15, 0.5);
-  width: 100%;
+  /* width: 100%; */
   height: 100%;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
 }
 
 .orangeFilter h3{
@@ -427,13 +426,12 @@ ul.menuList li:nth-child(3){
   height:50vh;
   margin:0;
   background-color: rgb(255, 253, 219);
+  padding: 0;
 }
 .cardDes{
   height:20vh;
-  width:100%;
+  width: 100%;
   background-color: rgb(255, 253, 219);
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
   border-width: thin;
   border-style: solid;
   border-color: rgb(40, 40, 40);
@@ -509,9 +507,7 @@ button.card3Image.animate .orangeFilter h3{
   background-position: center;
   /* background-attachment: fixed; */
   height: 30vh;
-  width: 100vw;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  width: 100%;
   border-style: none;
 }
 .card2Image{
@@ -522,9 +518,7 @@ button.card3Image.animate .orangeFilter h3{
   background-position: center;
   /* background-attachment: fixed; */
   height: 30vh;
-  width: 100vw;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  width: 100%;
   border-style: none;
 }
 .card3Image{
@@ -535,9 +529,7 @@ button.card3Image.animate .orangeFilter h3{
   background-position: center;
   /* background-attachment: fixed; */
   height: 30vh;
-  width: 100vw;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  width: 100%;
   border-style: none;
 }
 
@@ -576,6 +568,47 @@ button.card3Image.animate .orangeFilter h3{
 } */
 
 /* for bigger than 768 pixels aka desktops */
-/* @media only screen and (min-width: 768px){
+@media only screen and (min-width: 768px){
+.cardDes{
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.orangeFilter{
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.card1Image{
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.card2Image{
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.card3Image{
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.myCard button{
+  padding-left: 3vw;
+  padding-right: 3vw;
+}
+.myCard{
+  padding-left: 3vw;
+  padding-right: 3vw;
+  margin-bottom: 5vh;
+}
 
-} */
+.resumeButton{
+  width:20vw;
+}
+
+.aboutMe h1{
+  font-size: 400%;
+}
+
+.blueFilter h1{
+  font-size: 400%;
+}
+
+}
