@@ -1,39 +1,9 @@
-/* this website is styled for mobile first */
-/* ---------images-------- */
-.backImg{
-  background-image: url("images/keyboardDark-min.jpg");
-  background-color: rgb(8, 28, 111);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  height: 100vh;
-  width: 100%;
+body{
+  font-family: 'Encode Sans Condensed', sans-serif;
+  background-color: rgb(233,233,233);
 }
 
-.filterDim{
-  background-color: rgba(0, 0, 0, 0.5);
-  background-attachment: fixed;
-}
-
-.filterDim.welcomeOver{
-  animation-name: welcome2;
-  animation-duration: 300ms;
-  animation-timing-function: ease-in-out;
-  animation-delay: 0ms;
-  animation-fill-mode: forwards;
-}
-
-@keyframes welcome2 {
-  0%{
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-  100%{
-    background-color: rgba(8, 28, 111, 0.5);
-  }
-}
-
-/* ---------- custom icons ---------- */
+/* -------------------------- Navigation ------------------------------ */
 
 /* burger menu */
 .burger{
@@ -136,10 +106,6 @@
 }
 /* ---------- buttons ---------- */
 
-#togButton{
-  display: none;
-}
-
 /* menu toggle button */
 .toggleButton{
   width:51px;
@@ -150,14 +116,12 @@
   border-radius: 10px;
 }
 .toggleButton:focus{
-  background-color: rgba(255, 253, 219,.2);
   outline: none;
 }
-
 .toggleButton:hover{
   animation-name: hov;
   animation-duration: 300ms;
-  animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in;
   animation-fill-mode: forwards;
 }
 
@@ -166,16 +130,8 @@
     background-color: rgba(255, 255, 255, 0);
   }
   100%{
-    background-color: rgba(255, 253, 219,.2);
-  }
-}
-
-@keyframes hov{
-  0%{
-    background-color: rgba(255, 255, 255, 0);
-  }
-  100%{
-    background-color: rgba(255, 253, 219,.2);
+    background-color: rgba(255, 152, 15, 0.75);
+    box-shadow: 4px 4px rgb(233,233,233);
   }
 }
 
@@ -252,9 +208,9 @@ ul.menuList li:nth-child(3){
   min-height: 100%;
   border-style: solid;
   border-width: 5px;
-  border-color:rgb(255, 253, 219);
-  color: rgb(255, 253, 219);
-  border-radius: 25px;
+  border-color:rgb(233,233,233);
+  color: rgb(233,233,233);
+  border-radius: 15px;
 }
 .menuButton:hover{
   outline: none;
@@ -266,37 +222,147 @@ ul.menuList li:nth-child(3){
 
 /* animation for when clicking menu button */
 @keyframes menuB {
-  0% {
-    transform: scale(1);
-    background-color: rgba(0, 0, 0, 0);
+  0%{
+    background-color: rgba(255, 255, 255, 0);
   }
-  100% {
-    transform: scale(1.1);
-    background-color: rgba(255, 253, 219,.2);
+  100%{
+    background-color: rgba(255, 152, 15, 0.75);
+    box-shadow: 4px 4px rgb(233,233,233);
   }
 }
 
-.resumeButton{
-  width:50vw;
+/* ---------------- HOME ----------------- */
+
+.welcome{
+  background-image: url("images/keyboardDark-min.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.welcomeTitle h1{
   opacity: 0;
-  margin: auto;
-  margin-top: 13vh;
-  height:17vh;
-  animation-name: wel2;
+  margin:0;
+  padding-top:1vh;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  padding-bottom:1vh;
+  color: rgb(233,233,233);
+  text-align: center;
+  font-weight: bolder;
+  background-color: rgba(255, 152, 15, 0.75);
+  border-radius: 10px;
+  margin-top: 2vh;
+  margin-bottom: 10vh;
+  animation-name: wel;
   animation-duration: 400ms;
-  animation-delay: 350ms;
+  animation-delay: 1500ms;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
 }
-
-/* ---------- fonts ---------- */
-.webFont{
-  font-family: 'Oswald', sans-serif;
+.welcomeTitle h4{
+  opacity: 0;
+  margin:0;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  color: rgb(233,233,233);
+  text-align: center;
+  padding-top:38vh;
+  animation-name: wel;
+  animation-duration: 400ms;
+  animation-delay: 1300ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes wel{
+  0%{
+    opacity: 0;
+  }
+  80%{
+    transform: scale(1.2);
+  }
+  100%{
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
+.blueFilter{
+  background-color: rgba(8, 28, 111, 0.5);
+  width:100%;
+  height: 100%;
+}
+
+.welcomeAnimate{
+  opacity: 0;
+  animation-name: wel;
+  animation-duration: 400ms;
+  animation-delay: 1700ms;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+  text-align: center;
+}
+
+.resumeButton{
+  width:200px;
+  height:75px;
+  margin-bottom: 30vh;
+  background-color: rgba(0,0,0,0);
+  border-color: rgb(233,233,233);
+  border-radius: 15px;
+  border-width: medium;
+  border-style: solid;
+  color: rgb(233,233,233);
+}
+.resumeButton h4{
+  margin:0;
+}
+.resumeButton:hover{
+  animation-name: hov;
+  animation-duration: 300ms;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+@media only screen and (min-width: 768px){
+
+}
+/* ---------images-------- */
+/* .backImg{
+  background-image: url("images/keyboardDark-min.jpg");
+  background-color: rgb(8, 28, 111);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100%;
+}
+
+.filterDim{
+  background-color: rgba(0, 0, 0, 0.5);
+  background-attachment: fixed;
+}
+
+.filterDim.welcomeOver{
+  animation-name: welcome2;
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes welcome2 {
+  0%{
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  100%{
+    background-color: rgba(8, 28, 111, 0.5);
+  }
+}
+*/
 
 /* ---------- welcome ---------- */
-.welcome{
+/* .welcome{
   opacity: 0;
   min-height: 30vh;
   width:100vw;
@@ -327,58 +393,7 @@ ul.menuList li:nth-child(3){
     opacity: 0;
     height:0vh;
   }
-}
-.welcome2{
-  display: none;
-  min-height: 30vh;
-  max-width:100%;
-  margin-top: 35vh;
-  padding-bottom: 3vh;
-  width:100vw;
-}
-.welcome2 h1{
-  min-height: 10vh;
-  opacity: 0;
-  margin:auto;
-  color: rgb(255, 253, 219);
-  text-align: center;
-  font-weight: bolder;
-  font-size: 400%;
-  background-color: rgba(255, 152, 15, 0.75);
-  border-radius: 10px;
-  margin-bottom: 4vh;
-  animation-name: wel2;
-  animation-duration: 400ms;
-  animation-delay: 300ms;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
-}
-.welcome2 h3{
-  max-height: 5vh;
-  opacity: 0;
-  margin:0;
-  color: rgb(255, 253, 219);
-  text-align: center;
-  padding-bottom:7vh;
-  padding-top: 4vh;
-  animation-name: wel2;
-  animation-duration: 400ms;
-  animation-delay: 250ms;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
-}
-@keyframes wel2{
-  0%{
-    opacity: 0;
-  }
-  80%{
-    transform: scale(1.2);
-  }
-  100%{
-    transform: scale(1);
-    opacity: 1;
-  }
-}
+} */
 
 /* ---------- home page ---------- */
 
@@ -542,25 +557,6 @@ button.card3Image.animate .orangeFilter h3{
   background-attachment: fixed;
 }
 
-.blueFilter{
-  background-color: rgba(8, 28, 111, 0.5);
-  width:100%;
-}
-.blueFilter h1{
-  color: rgb(255, 253, 219);
-  text-align: center;
-  padding-top: 10vh;
-  padding-bottom: 5vh;
-  font-weight: bold;
-}
-
-.blueFilter p{
-  color: rgb(255, 253, 219);
-  text-align: center;
-  padding: 5vh;
-  font-size: 120%;
-  margin: 0;
-}
 
 /* for bigger than 600 pixels aka tablets */
 /* @media only screen and (min-width: 600px) {
@@ -598,11 +594,6 @@ button.card3Image.animate .orangeFilter h3{
   padding-right: 3vw;
   margin-bottom: 5vh;
 }
-
-.resumeButton{
-  width:20vw;
-}
-
 .aboutMe h1{
   font-size: 400%;
 }
